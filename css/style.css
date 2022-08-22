@@ -1,0 +1,250 @@
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100;200;300;400;500;600;700;800;900&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/* universal styles */
+:root {
+    --pomodoro: #f87070;
+    --color-2: #70F3F8;
+    --color-3: #D881F8;
+    --color-timer: #D7E0FF;
+    --color-bg: #1E213F;
+    --color-bg-settings: #FFF;
+    --color-timer-option: #EFF1FA;
+    --color-oval: #161932;
+
+    --font-kumbh: 'Kumbh Sans', sans-serif;
+    --font-roboto: 'Roboto Slab', serif;
+    --font-space: 'Space Mono', monospace;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 0;
+}
+
+ .main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 700px;
+    height: 400px;
+    margin-top: 100px;
+    background-color: var(--color-bg);
+}
+
+h1 {
+  color: var(--color-timer);
+  font-family: var(--font-kumbh);
+  font-size: 1.5em;
+  font-weight: 500;
+  padding: 20px 0;
+}
+
+ .clock {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    margin: 30px 0;
+    box-shadow: inset -30px -30px 100px -180px var(--color-timer),
+                inset -30px -30px 100px -60px var(--color-timer); 
+ }
+
+ 
+
+.timer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+    /* font-family: var(--font-kumbh); */
+  }
+  
+  .time {
+    display: flex;
+    align-items: center;
+    /* font-family: var(--font-kumbh); */
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-timer);
+  }
+
+  .button-group {
+    background-color: var(--color-oval);
+    border-radius: 20px;
+  }
+  
+  .mode-button {
+    font-size: 12px;
+    border-radius: 12px;
+
+    cursor: pointer;
+    box-shadow: none;
+    font-weight: 100;
+    color: var(--color-timer-option);
+    border: 1px solid transparent;
+    padding: 5px 12px;
+    background: none;
+  }
+  
+  
+  
+  .main-button {
+    font-family: var(--font-space);
+    font-size: 10px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--color-timer);
+    font-weight: 700;
+    cursor: pointer;
+    
+    /* transition: color 0.5s ease-in-out 0s; */
+  }
+  
+
+
+  .dropup {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropup svg {
+    cursor: pointer;
+  }
+
+.dropup-content {
+  display: none;
+  position: absolute;
+  background-color: var(--color-timer-option);
+  width: 350px;
+  bottom: 0;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  border-radius: 15px;
+}
+
+.settings {
+  padding: 20px 0 20px 20px;
+  font-family: var(--font-roboto);
+  font-weight: 700;
+}
+
+.dropup-time {
+  font-family: var(--pomodoro);
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.dropup-content-form {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.icon {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  background-color: var(--color-timer);
+  padding: 5px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.svg {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.dropup-time {
+  padding: 20px; 
+}
+
+.close-btn {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+.dropup-pomodoro > p, .dropup-short > p, .dropup-long p {
+  font-family: var(--font-space);
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.font, .colors {
+  display: flex;
+  padding: 20px 0 20px 20px;
+}
+
+.colors p {
+  margin: 0;
+}
+
+.id {
+  position: absolute;
+  right: 20px;
+}
+
+.id1, .id2, .id3 {
+  border-radius: 50%;
+  padding: 4px;
+  margin-left: 2px;
+  border: none;
+  background-color: var(--color-timer);
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.id1 {
+  font-family: var(--font-kumbh);
+}
+
+.id2 {
+  font-family: var(--font-roboto);
+}
+
+.id3 {
+  font-family: var(--font-space);
+}
+
+.color-ids {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  right: 20px;
+  gap: 5px;
+  cursor: pointer;
+}
+
+#c1, #c2, #c3 {
+  width: 20px;
+  height: 20px;
+  border: none;
+  border-radius: 50%;
+}
+
+#c1 {
+  background-color: var(--pomodoro);
+}
+#c2 {
+  background-color: var(--color-2);
+}
+
+#c3 {
+  background-color: var(--color-3);
+}
+
+
+
+.show {display: block;}
